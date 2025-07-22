@@ -88,3 +88,15 @@ GROUP BY
     film.film_id, film.title
 ORDER BY 
     ventas_totales DESC;
+
+
+
+SELECT c.country_id, c.country, COUNT(ci.city) AS city_count
+FROM country c
+LEFT JOIN city ci ON c.country_id = ci.country_id
+GROUP BY c.country_id, c.country
+ORDER BY c.country_id;
+
+
+
+
